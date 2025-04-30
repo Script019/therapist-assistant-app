@@ -1,12 +1,40 @@
-# React + Vite
+# 🧠 Therapist Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, professional web app designed to help therapists manage their clients, sessions, and daily tasks — all in one calm, organized space.
 
-Currently, two official plugins are available:
+Created by: **Charles Andrew Schuck**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Login screen with secure layout flow
+- ✅ Dashboard with quick stats and upcoming session
+- ✅ Full client list and individual client profile pages
+- ✅ Session note logging per client
+- ✅ Appointment calendar (with interactive view)
+- ✅ Appointment scheduling form
+- ✅ Invoice tracker with status breakdown
+- ✅ Visual reports using charts
+- ✅ Custom 404 page and full navigation bar
+- ✅ Tailwind CSS for responsive, clean design
+
+---
+
+## 🛠️ Built With
+
+- **React** (Vite)
+- **Tailwind CSS**
+- **React Router DOM**
+- **Recharts** (for charts)
+- **React Calendar**
+- **JavaScript (ES6+)**
+
+---
+
+## ▶️ How to Run It
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/Script019/therapist-assistant-app.git
