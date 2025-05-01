@@ -11,8 +11,8 @@ import Dashboard from './pages/Dashboard';
 import ClientList from './pages/ClientList';
 import ClientProfile from './pages/ClientProfile';
 import Invoices from './pages/Invoices';
-import CalendarView from './components/CalendarView'; // ✅ Correct calendar component
-import AppointmentForm from './pages/AppointmentForm';
+import CalendarView from './components/CalendarView'; // ✅ correct component
+import AppointmentForm from './components/AppointmentForm'; // ✅ corrected path
 import Reports from './pages/Reports';
 import NotFound from './pages/NotFound';
 
@@ -33,7 +33,7 @@ function App() {
               <Route path="/clients" element={<ClientList />} />
               <Route path="/clients/:id" element={<ClientProfile />} />
               <Route path="/invoices" element={<Invoices />} />
-              <Route path="/calendar" element={<CalendarView />} /> {/* ✅ FIXED */}
+              <Route path="/calendar" element={<CalendarView />} />
               <Route path="/appointments/new" element={<AppointmentForm />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="*" element={<NotFound />} />
