@@ -37,7 +37,7 @@ function ClientProfile() {
 
   if (!clientData) {
     return (
-      <div className="p-4">
+      <div className="p-6 max-w-4xl mx-auto">
         <p className="text-red-500 font-semibold">Client not found.</p>
         <Link to="/clients" className="text-blue-600 underline mt-2 block">← Back to Clients</Link>
       </div>
@@ -53,23 +53,29 @@ function ClientProfile() {
   };
 
   return (
-    <div className="p-4 sm:p-6 max-w-4xl mx-auto space-y-6">
+    <div className="p-6 sm:p-8 max-w-4xl mx-auto space-y-6">
       <Link to="/clients" className="text-blue-600 underline">← Back to Clients</Link>
       <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">{clientData.name}</h2>
 
-      <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md space-y-2">
+      {/* Contact Info */}
+      <div className="bg-white p-5 sm:p-6 rounded-xl shadow-md space-y-1 text-sm text-gray-700">
         <p><strong>Email:</strong> {clientData.email}</p>
         <p><strong>Phone:</strong> {clientData.phone}</p>
         <p><strong>Last Session:</strong> {clientData.lastSession}</p>
       </div>
 
-      <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md">
-        <h3 className="text-lg font-semibold text-gray-700 mb-2">Session Notes</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
-          {notes.map((note, idx) => (
-            <li key={idx}>{note}</li>
-          ))}
-        </ul>
+      {/* Notes */}
+      <div className="bg-white p-5 sm:p-6 rounded-xl shadow-md">
+        <h3 className="text-lg font-semibold text-gray-700 mb-3">Session Notes</h3>
+        {notes.length > 0 ? (
+          <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
+            {notes.map((note, idx) => (
+              <li key={idx}>{note}</li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-sm text-gray-500 italic mb-4">No notes added yet.</p>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-3">
           <label className="block text-sm font-medium text-gray-700">Add New Session Note:</label>
