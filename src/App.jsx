@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import Header from './components/Header';
 import NavBar from './components/NavBar';
@@ -16,17 +16,18 @@ import AppointmentForm from './components/AppointmentForm';
 import Reports from './pages/Reports';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // Set to false to test login screen
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <Router>
-      <Header />
+    <Router basename="/therapist-assistant-app">
       {isLoggedIn ? (
         <>
+          <Header />
           <NavBar />
           <Layout>
             <Routes>
-              <Route index element={<Home />} />
+              <Route path="/" element={<Navigate to="/home" replace />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/clients" element={<ClientList />} />
               <Route path="/clients/:id" element={<ClientProfile />} />
@@ -34,11 +35,14 @@ function App() {
               <Route path="/calendar" element={<CalendarView />} />
               <Route path="/appointments/new" element={<AppointmentForm />} />
               <Route path="/reports" element={<Reports />} />
+              <Route path="*" element={<Navigate to="/home" replace />} />
             </Routes>
           </Layout>
         </>
       ) : (
-        <Login onLogin={() => setIsLoggedIn(true)} />
+        <Routes>
+          <Route path="*" element={<Login onLogin={() => setIsLoggedIn(true)} />} />
+        </Routes>
       )}
     </Router>
   );
