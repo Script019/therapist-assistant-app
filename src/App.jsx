@@ -12,7 +12,7 @@ import ClientList from './pages/ClientList';
 import ClientProfile from './pages/ClientProfile';
 import Invoices from './pages/Invoices';
 import CalendarView from './components/CalendarView';
-import AppointmentForm from './pages/AppointmentForm';
+import AppointmentForm from './components/AppointmentForm';
 import Reports from './pages/Reports';
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
               <Route path="/calendar" element={<CalendarView />} />
               <Route path="/appointments/new" element={<AppointmentForm />} />
               <Route path="/reports" element={<Reports />} />
-              {/* Removed <Route path="*" element={<NotFound />} /> */}
+              {/* No NotFound route */}
             </Routes>
           </Layout>
         </>
