@@ -1,11 +1,11 @@
 function Header() {
   return (
-    <header className="bg-blue-600 text-white py-4 shadow">
-      <div className="max-w-5xl mx-auto px-4 flex items-center justify-between">
-        <h1 className="text-xl font-bold tracking-wide">
+    <header className="bg-blue-700 text-white shadow-md py-4">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-wide">
           🧠 Therapist Assistant
         </h1>
-        <span className="text-sm text-blue-200">
+        <span className="mt-2 sm:mt-0 text-sm text-blue-200">
           Helping You Stay Focused
         </span>
       </div>
