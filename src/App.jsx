@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import Layout from './components/Layout';
 
 import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import ClientList from './pages/ClientList';
@@ -16,7 +17,7 @@ import AppointmentForm from './components/AppointmentForm';
 import Reports from './pages/Reports';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // must start at false
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <Router basename="/therapist-assistant-app">
@@ -41,7 +42,9 @@ function App() {
         </>
       ) : (
         <Routes>
-          <Route path="*" element={<Login onLogin={() => setIsLoggedIn(true)} />} />
+          <Route path="/" element={<Login onLogin={() => setIsLoggedIn(true)} />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       )}
     </Router>
