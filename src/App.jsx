@@ -27,6 +27,7 @@ function App() {
           <NavBar />
           <Layout>
             <Routes>
+              <Route index element={<Home />} />
               <Route path="/" element={<Home />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/clients" element={<ClientList />} />
@@ -35,7 +36,6 @@ function App() {
               <Route path="/calendar" element={<CalendarView />} />
               <Route path="/appointments/new" element={<AppointmentForm />} />
               <Route path="/reports" element={<Reports />} />
-              {/* No NotFound route */}
             </Routes>
           </Layout>
         </>
