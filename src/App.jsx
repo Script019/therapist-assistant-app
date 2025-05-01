@@ -16,14 +16,13 @@ import AppointmentForm from './components/AppointmentForm';
 import Reports from './pages/Reports';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // set to false to test login screen
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Show login first
 
   return (
     <Router>
-      <Header />
-
       {isLoggedIn ? (
         <>
+          <Header />
           <NavBar />
           <Layout>
             <Routes>
