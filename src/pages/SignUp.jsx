@@ -5,7 +5,6 @@ function SignUp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You could later add real signup logic here
     alert('Sign up successful! Please log in.');
     navigate('/');
   };
