@@ -11,10 +11,9 @@ import Dashboard from './pages/Dashboard';
 import ClientList from './pages/ClientList';
 import ClientProfile from './pages/ClientProfile';
 import Invoices from './pages/Invoices';
-import CalendarView from './components/CalendarView'; // ✅ correct component
-import AppointmentForm from './components/AppointmentForm'; // ✅ corrected path
+import CalendarView from './components/CalendarView';
+import AppointmentForm from './pages/AppointmentForm';
 import Reports from './pages/Reports';
-import NotFound from './pages/NotFound';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true); // set to false to test login screen
@@ -36,7 +35,7 @@ function App() {
               <Route path="/calendar" element={<CalendarView />} />
               <Route path="/appointments/new" element={<AppointmentForm />} />
               <Route path="/reports" element={<Reports />} />
-              <Route path="*" element={<NotFound />} />
+              {/* Removed <Route path="*" element={<NotFound />} /> */}
             </Routes>
           </Layout>
         </>
