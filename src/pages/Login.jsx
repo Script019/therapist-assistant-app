@@ -6,7 +6,7 @@ function Login({ onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onLogin();
-    navigate('/'); // redirect after login
+    navigate('/home');
   };
 
   return (

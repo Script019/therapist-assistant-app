@@ -16,7 +16,7 @@ import AppointmentForm from './components/AppointmentForm';
 import Reports from './pages/Reports';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // must start at false
 
   return (
     <Router basename="/therapist-assistant-app">
@@ -26,7 +26,7 @@ function App() {
           <NavBar />
           <Layout>
             <Routes>
-              <Route path="/" element={<Navigate to="/home" replace />} />
+              <Route path="/" element={<Navigate to="/home" />} />
               <Route path="/home" element={<Home />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/clients" element={<ClientList />} />
@@ -35,7 +35,7 @@ function App() {
               <Route path="/calendar" element={<CalendarView />} />
               <Route path="/appointments/new" element={<AppointmentForm />} />
               <Route path="/reports" element={<Reports />} />
-              <Route path="*" element={<Navigate to="/home" replace />} />
+              <Route path="*" element={<Navigate to="/home" />} />
             </Routes>
           </Layout>
         </>
