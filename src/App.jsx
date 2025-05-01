@@ -14,7 +14,10 @@ import Dashboard from './pages/Dashboard';
 import ClientList from './pages/ClientList';
 import ClientProfile from './pages/ClientProfile';
 import Invoices from './pages/Invoices';
-import NotFound from './pages/NotFound'; // ✅ New import
+import NotFound from './pages/NotFound';
+import CalendarView from './components/CalendarView';
+import AppointmentForm from './components/AppointmentForm';
+import Reports from './pages/Reports'; // ✅ NEW
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -32,7 +35,10 @@ function App() {
               <Route path="/clients" element={<ClientList />} />
               <Route path="/clients/:id" element={<ClientProfile />} />
               <Route path="/invoices" element={<Invoices />} />
-              <Route path="*" element={<NotFound />} /> {/* ✅ Catch-all route */}
+              <Route path="/calendar" element={<CalendarView />} />
+              <Route path="/appointments" element={<AppointmentForm />} />
+              <Route path="/reports" element={<Reports />} /> {/* ✅ NEW */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
         </>

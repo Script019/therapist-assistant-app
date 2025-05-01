@@ -7,6 +7,9 @@ function NavBar() {
       <Link to="/dashboard" className="hover:text-blue-600 font-medium">Dashboard</Link>
       <Link to="/clients" className="hover:text-blue-600 font-medium">Clients</Link>
       <Link to="/invoices" className="hover:text-blue-600 font-medium">Invoices</Link>
+      <Link to="/calendar" className="hover:text-blue-600 font-medium">Calendar</Link>
+      <Link to="/appointments" className="hover:text-blue-600 font-medium">Appointments</Link>
+      <Link to="/reports" className="hover:text-blue-600 font-medium">Reports</Link> {/* ✅ NEW */}
     </nav>
   );
 }
