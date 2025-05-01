@@ -1,7 +1,12 @@
+import { useNavigate } from 'react-router-dom';
+
 function Login({ onLogin }) {
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     onLogin();
+    navigate('/'); // redirect after login
   };
 
   return (
