@@ -2,10 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-image: url('/background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
+/* You can add global styles below if needed */
